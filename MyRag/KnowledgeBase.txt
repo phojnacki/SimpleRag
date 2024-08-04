@@ -1,7 +1,195 @@
-The Center’s facilities are located on the northern shore of the beautiful Turawskie Duże Lake surrounded by picturesque pine forests. We would like to invite you to blissful rest and relaxation as well as entertainment and fun in this wonderful place. Our center is a perfect place for holidays, weekend breaks, group stays, integration games, conferences, family parties and weddings. Our complex offers extensive accommodation and catering facilities.
-Our accommodation consists of: Holiday Home Zielony, which offers 14 double rooms, 2 triple suites and one four-bed apartment Manhattan cottages, in which there are four twin bungalows and in each of them two comfortable apartments Borowik Resort comprising 5 three- and four-person cottages, 2 two-room bungalows, four or five-person, and a three-room holiday home for five or six people.
-Together, we have 100 beds. On the premises there are avenues with rebates and flowerbeds, scales, shrubs and trees, among which you can find gazebos, benches and swings to fully enjoy the rest in our place.
-Our gastronomic part is: operating for years Restaurant Borowik known for delicious home-made meals. Serving Polish and regional dishes.
-Agata’s Summer Cafe by the beach where on hot days you can cool off with a beer or ice cream, admire the beautiful views and in the evening meet friends and play billiards.
-Grill Bar, which invites you to delicious barbeque food and special events.
-Recreation and Leisure Center Borowik is an attractive place for various events At your disposal are: Conference room for 40 people, Two banquet halls for family events each for 40 people, Two grill bars for social events for up to 200 people, Borowik restaurant with a spacious covered terrace for up to 100 people, New banquet hall for 200 people.
+Major Property Rental Provider 4Services Maintenance Technician Management
+Our client engaged gravity9 in providing a vast modernization of internal and customer facing digital systems, with the intent of becoming a truly digitalfirst operator in the American property rental sector.
+Part of that program created “4Services”, which overhauled a previously troubled disparate set of systems and processes used to book and manage maintenance of rental properties. 
+These systems suffered a lack of standardization, synching issues, and a high time and resource requirement which frustrated users and customers. 
+gravity9 developed a standardized process and 6 distinct products to support technician workflow which are utilized across the United States. 
+The solutions were built around .NET, React, SQL Server and Cosmo DB. 
+gravity9 also provided manual testing of the products and collaborated with the client’s incumbent providers of automated testing. 
+The resulting suite has delivered significant benefits (ease of use, lower resource overheads, a streamlined user-friendly experience) to internal users, external customers and maintenance technicians engaged by the client to conduct property maintenance.
+Utilized Technology Stack Cloud: Azure, Azure Kubernetes Service Database: Azure SQL, CosmosDB, Blob Storage Backend: NET, Microsoft CRM, Geotab, Box, Micro-services, Azure Service Bus, Event Hub, SignalR, Google Maps (integration) Frontend: React, Micro-frontends, Design System, Progressive Web Application Review of Challenges Our client are one of the largest are one of the largest suppliers to the property rental market in the United States. 
+They selected gravity9 to consult and enable a wide scale program of modernization across their business, as part of a pivot to embrace technology and pioneer a digital approach to business in the property market not previously seen. 
+This case study addresses just one part of that larger initiative.
+The client’s maintenance teams deal with every aspect of property maintenance, whether the property is occupied by a resident or vacant. 
+Internal users of the 4Services system (employees) take calls or receive online support requests from customers (renters of properties) and schedule/manage suitable maintenance technicians (plumbers, electricians and so forth).
+Previously there were many disparate systems and non-standardized processes which led to inefficiencies in the entire end to end process including: booking issues, mismanagement of workloads and technicians, and frustration for users, customers, and technicians. 
+Information could be incorrect or erroneous due to synching issues when technicians are in areas of low or no internet connectivity, resulting in lots of places things could (put simply) break. 
+Centralization and standardization were urgently needed to ensure a better customer experience and greater easeof-use/efficiency for internal users and maintenance technicians (and this would result in better reporting, analysis, decisions, and cost savings across the board).
+gravity9 developed a standardized process and 6 distinct products to support technician workflow which are utilized across the United States.
+gravity9 Case Study
+Our Solution
+gravity9 implemented a standardized
+process, rolled out across the United
+States, and made up of six distinct
+products which support technician
+workflow.
+Scoping Management: This data
+repository tool provides a means to
+define condition issues (what is wrong
+with a property), remedies (how to fix it),
+locations, and different asset types. This
+provides reference data usable during
+the technician’s workflow, a standardized
+way to enter issues beginning with the
+resident, consistent reporting across
+regions and (as a result) the ability to
+benchmark. Furthermore, this formed
+useful reference data with which to
+power a predictive AI model that would
+allow residents to raise maintenance
+requests through conversational
+interfaces.
+Territory Management: This tool
+allows the organization a way to detail
+out the hierarchy of the maintenance
+organization - from the highest level
+through to the technician. In this tool,
+users were able to visually utilize a
+map and carve out territories for their
+technicians.
+Resource Management: Through this
+tool, employees can be assigned to the
+Territory Management tool above and
+integration points (for other systems) can
+be created. GeoTab is used to track the
+Technician’s truck.
+Scheduling: A tool to view Maintenance
+Technician’s positions, work orders and
+schedules overlayed on a geographic
+map. Two types of scheduling are
+involved: the first is Dynamic Scheduling,
+in which users can view all open work
+orders on a map, layered with technician
+routes, locations and type of work (to
+aid effective scheduling). The second is
+Work Order specific and uses the same
+tool for a specific assignment. This tool
+also allows users to be able to see where
+their technicians are at any point (via real
+time integration with GeoTab devices on
+technician’s vehicles) to ensure they are
+on task, as well as to interact with them
+in case of needs from other technicians.
+This helps to ensure technicians are
+optimized, organized, and drives higher
+customer satisfaction.
+Work Order Management: Technicians
+use this product to view work orders,
+issues, and customer information –
+and to record issues as resolved, close
+open issues or escalate them for the
+attention of vendors or management.
+It is a tactical tool allowing users to
+visually progress through states of work
+orders, assign ways to fix problems,
+add before/after images of work orders
+and additional comments, and escalate
+to a 3rd party if required. A state
+machine was implemented to guide
+technicians through the process, and
+guided experiences put in place to help
+to train new technicians with standard
+operating procedures, or a “typical” asset
+malfunction.
+Maintenance Monitoring: This is a
+management tool for service requests
+that have been received. It includes a
+customer-accessible website for raising
+maintenance issue requests. These
+can then be queried and triaged and
+new work orders created (to dispatch
+maintenance technicians). The flow
+of the work order can be followed,
+rescheduled, unscheduled and escalated.
+These products combine to provide
+a complete digital workflow for client
+technicians to receive, triage, and
+manage the resolution of customer
+(renter) property issues, as well as
+the associated contact with (and
+management) of property maintenance
+technicians in the field.
+Our Approach
+Following high level discussions of the
+challenges faced, gravity9 set about
+the more granular process of defining
+and addressing what was needed.
+Thorough requirement gathering with IT
+and business stakeholders took place
+to identify what “was” and what “needed
+to be,” and iterative UX design/review
+sessions took place (with approval
+gained before development began).
+A development team was assigned to
+each product, with a scheduling team and
+a Maintenance Experience team brought
+in to accelerate progress in key areas.
+The solutions were built around .NET,
+React, and Azure cloud. Microsoft CRM
+was also used, with gravity9 developing
+customization and plugins to address
+native integration and messaging
+challenges to feed updates from external
+systems. Google Maps integration was
+chosen for map-related views, and
+Micro Frontends were leveraged to allow
+feature UI fragment use across multiple
+persona interfaces (and those fragments
+could be updated without a need to
+redeploy the parent platform), assisting
+future scalability.
+For offline scenarios for technicians in
+the field where network connectivity was
+low or offline, gravity9 built in progressive
+web application (PWA). Coupled with
+local storage, this approach provided
+extra resilience and a fault-tolerant
+design to help mitigate problems in areas
+of low connectivity.
+Manual testing was conducted by
+gravity9 teams, who collaborated on
+automated testing with an external
+vendor the client had existing agreements
+with, and overall delivery of gravity9’s
+solution was on time. Further user and
+product support was provided postlaunch, as well as ongoing maintenance
+and further updates and add-ons to the
+systems developed, like using Generative
+AI to schedule and optimize technician’s
+working routes.
+ gravity9.com
+“These products
+combine to provide
+a complete digital
+workflow for client
+technicians to receive,
+triage, and manage the
+resolution of customer
+property issues.”
+WE’RE
+BUILDING
+BETTER
+DIGITAL
+PRODUCTS
+Subsequent Outcomes
+Thanks to our solution, a streamlined and consistent
+experience could be enjoyed by employees, customers,
+and maintenance technicians.
+For the client’s internal users, a more enjoyable working
+experience with less mandatory repetition of tasks,
+efficient scheduling with assistance in the intelligent
+booking of workloads and routes.
+For our client’s customers, quicker resolution of issues
+thanks to more efficient booking and deployment of
+maintenance technicians, leading to greater customer
+satisfaction.
+For maintenance technicians, an optimized working
+route, and workload, leads to a more sensible approach
+to tasks and a less stressful interaction between
+customers and staff. Thanks to the way our solution
+was built, less tribal knowledge needed to be shared
+between incumbent staff and new employees, reducing
+training time and costs.
+To sum up, the modernization of the system delivered
+a positive experience for everyone involved and, from a
+business perspective, significantly reduced wastage in
+time and resources. 

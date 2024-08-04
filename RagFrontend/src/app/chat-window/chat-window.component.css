@@ -5,18 +5,20 @@
   height: 600px;
   display: flex;
   flex-direction: column;
-  background-color: #ffffff;
+  background-color: #555555;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.483);
   overflow: hidden;
 }
 
 .chat-input {
   width: 100%;
+  height: 70px;
+  display:flex;
 }
 
 mat-card-header {
-  background-color: #3f51b5;
+  background-color: #961352;
   color: white;
   padding: 16px;
   border-top-left-radius: 10px;

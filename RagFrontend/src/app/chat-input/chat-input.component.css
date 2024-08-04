@@ -1,7 +1,8 @@
 /* Chat Input Component Styles */
 
 mat-form-field {
-  width: calc(100% - 80px); /* Adjusted to accommodate the send button */
+ 
+  flex: 1;
   margin-right: 10px; /* Added margin for spacing */
 }
 
@@ -14,7 +15,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #3f51b5; /* Primary color */
+  background-color: #961352; /* Primary color */
   color: white;
   cursor: pointer;
   border: none;
@@ -23,5 +24,5 @@ button {
 }
 
 button:hover {
-  background-color: #303f9f; /* Darker shade on hover */
+  background-color: #720E3F; /* Darker shade on hover */
 }

@@ -8,6 +8,7 @@ import { Component, Input } from '@angular/core';
 export class ChatMessageComponent {
   @Input() message: string; // Input property for the message text
   @Input() timestamp: string; // Input property for the message timestamp
+  @Input() isSystemic: boolean;
 
   constructor() {}
 }

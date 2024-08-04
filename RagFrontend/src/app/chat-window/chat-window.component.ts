@@ -8,7 +8,8 @@ import { ChatService } from '../chat.service';
   styleUrls: ['./chat-window.component.css']
 })
 export class ChatWindowComponent implements OnInit {
-  messages: { text: string, timestamp: string }[] = [];
+
+  messages: { text: string, timestamp: string, isSystemic: boolean }[] = [];
 
   constructor(private localStorageService: ChatService, private http: HttpClient) {}
 
@@ -23,13 +24,13 @@ export class ChatWindowComponent implements OnInit {
   sendMessage(newMessage: string) {
     if (newMessage.trim() !== '') {
       const timestamp = this.getCurrentTime();
-      this.messages.push({ text: newMessage, timestamp });
+      this.messages.push({ text: newMessage, timestamp, isSystemic: false });
       this.localStorageService.setItem('chatMessages', JSON.stringify(this.messages));
       const url = `http://localhost:5000/ragAnswer`;
       this.http.get(url, { params: { question: newMessage }, observe: 'body', responseType: 'text' })
         .subscribe({
           next: (response) => {
-            this.messages.push({ text: response, timestamp });
+            this.messages.push({ text: response, timestamp, isSystemic : true });
             this.localStorageService.setItem('chatMessages', JSON.stringify(this.messages));
           },
           error: (error) => {
