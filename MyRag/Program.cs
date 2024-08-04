@@ -38,6 +38,16 @@ kernel.ImportPluginFromObject(memoryPlugin);
 
 // Web App
 var webAppBuilder = WebApplication.CreateBuilder(args);
+webAppBuilder.Services.AddCors(options =>
+{
+	options.AddPolicy("AllowSpecificOrigin",
+		builder =>
+		{
+			builder.WithOrigins("http://localhost:4200")
+				   .AllowAnyHeader()
+				   .AllowAnyMethod();
+		});
+});
 webAppBuilder.Services.AddEndpointsApiExplorer();
 webAppBuilder.Services.AddSwaggerGen(options =>
 {
@@ -52,6 +62,7 @@ webAppBuilder.Services.AddSwaggerGen(options =>
 webAppBuilder.Services.AddSingleton(kernel);
 
 var app = webAppBuilder.Build();
+app.UseCors("AllowSpecificOrigin");
 app.UseSwagger();
 app.UseSwaggerUI();
 app.UseHttpsRedirection();

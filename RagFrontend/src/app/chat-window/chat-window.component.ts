@@ -25,12 +25,12 @@ export class ChatWindowComponent implements OnInit {
       const timestamp = this.getCurrentTime();
       this.messages.push({ text: newMessage, timestamp });
       this.localStorageService.setItem('chatMessages', JSON.stringify(this.messages));
-      const url = `http://localhost:4321`;
+      const url = `http://localhost:5000/ragAnswer`;
       this.http.get(url, { params: { question: newMessage }, observe: 'body', responseType: 'text' })
         .subscribe({
           next: (response) => {
-            console.log('Response from server:', response);
-            // Handle the response if needed
+            this.messages.push({ text: response, timestamp });
+            this.localStorageService.setItem('chatMessages', JSON.stringify(this.messages));
           },
           error: (error) => {
             console.error('Error:', error);
