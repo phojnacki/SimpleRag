@@ -1,0 +1,27 @@
+/* Chat Input Component Styles */
+
+mat-form-field {
+  width: calc(100% - 80px); /* Adjusted to accommodate the send button */
+  margin-right: 10px; /* Added margin for spacing */
+}
+
+button {
+  margin-left: 10px;
+  border-radius: 50%;
+  width: 50px; /* Increased button size for better usability */
+  height: 50px;
+  min-width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3f51b5; /* Primary color */
+  color: white;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #303f9f; /* Darker shade on hover */
+}

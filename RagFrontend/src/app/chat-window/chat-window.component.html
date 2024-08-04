@@ -1,0 +1,13 @@
+<mat-card class="chat-window">
+  <mat-card-header>
+    <mat-card-title>Chat Room</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list>
+      <app-chat-message *ngFor="let message of messages" [message]="message.text" [timestamp]="message.timestamp"></app-chat-message>
+    </mat-list>
+  </mat-card-content>
+  <mat-card-actions>
+    <app-chat-input (sendMessage)="sendMessage($event)"></app-chat-input>
+  </mat-card-actions>
+</mat-card>
