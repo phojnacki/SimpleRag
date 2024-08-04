@@ -8,7 +8,7 @@ mat-form-field {
 button {
   margin-left: 10px;
   border-radius: 50%;
-  width: 50px; /* Increased button size for better usability */
+  width: 80px; /* Increased button size for better usability */
   height: 50px;
   min-width: 50px;
   display: flex;

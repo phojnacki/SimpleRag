@@ -1,5 +1,9 @@
 /* Chat Message Component Styles */
 
+.list-item {
+  height: auto;
+}
+
 .message-container {
   display: flex;
   align-items: flex-start;
@@ -13,6 +17,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   max-width: 80%;
   word-wrap: break-word; /* Wrap long words */
+  text-wrap: wrap;
   position: relative;
 }
 
