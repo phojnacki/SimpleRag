@@ -27,16 +27,48 @@ export class ChatWindowComponent implements OnInit {
       this.messages.push({ text: newMessage, timestamp, isSystemic: false });
       this.localStorageService.setItem('chatMessages', JSON.stringify(this.messages));
       const url = `http://localhost:5000/ragAnswer`;
-      this.http.get(url, { params: { question: newMessage }, observe: 'body', responseType: 'text' })
-        .subscribe({
-          next: (response) => {
-            this.messages.push({ text: response, timestamp, isSystemic : true });
-            this.localStorageService.setItem('chatMessages', JSON.stringify(this.messages));
-          },
-          error: (error) => {
-            console.error('Error:', error);
-          }
-        });
+      const params = new URLSearchParams({ question: newMessage }).toString();
+      
+      fetch(`${url}?${params}`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'text/plain' // Set the appropriate headers
+        }
+      })
+      .then(async response => {
+        const reader = response.body?.getReader();
+        if (!reader) {
+          throw new Error('Failed to read response');
+        }
+        const decoder = new TextDecoder();
+
+        var msg = { text: "", timestamp: timestamp, isSystemic: true };
+        this.messages.push(msg);
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+          if (!value) continue;
+          const jsonPart = decoder.decode(value);
+          console.log(jsonPart);
+          msg.text+=jsonPart;
+        }
+        reader.releaseLock();
+      })
+      .catch(error => {
+        console.error('Error streaming data:', error);
+      });
+
+
+      // this.http.get(url, { params: { question: newMessage }, observe: 'body', responseType: 'text' })
+      //   .subscribe({
+      //     next: (response) => {
+      //       this.messages.push({ text: response, timestamp, isSystemic : true });
+      //       this.localStorageService.setItem('chatMessages', JSON.stringify(this.messages));
+      //     },
+      //     error: (error) => {
+      //       console.error('Error:', error);
+      //     }
+      //   });
     }
   }
 
