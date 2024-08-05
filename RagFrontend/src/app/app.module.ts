@@ -20,7 +20,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -40,7 +40,7 @@ import { provideHttpClient } from '@angular/common/http';
   providers: [
     provideClientHydration(),
     provideAnimationsAsync(),
-    provideHttpClient()
+    provideHttpClient(withFetch())
   ],
   bootstrap: [AppComponent]
 })

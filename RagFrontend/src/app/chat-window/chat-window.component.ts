@@ -49,7 +49,6 @@ export class ChatWindowComponent implements OnInit {
           if (done) break;
           if (!value) continue;
           const jsonPart = decoder.decode(value);
-          console.log(jsonPart);
           msg.text+=jsonPart;
         }
         reader.releaseLock();
