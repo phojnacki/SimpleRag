@@ -78,8 +78,6 @@ app.MapGet("/ragAnswer", async (HttpContext context, Kernel ai, string question)
     Question: {{$input}}
     Answer shortly the question in 1 sentence using the memory content: {{Recall}}.";
 
-    // var question = "Do they serve Polish dishes in Restaurant Borowik?";
-
     var arguments = new KernelArguments(settings)
     {
         { "input", question },
