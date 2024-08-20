@@ -56,7 +56,7 @@ webAppBuilder.Services.AddSwaggerGen(options =>
     options.MapType<string>(() => new OpenApiSchema
     {
         Type = "string",
-        Example = new OpenApiString("Tell me about the gravity9 technology stack in terms of database, cloud and backend")
+        Example = new OpenApiString("Tell me about your life")
     });
 });
 webAppBuilder.Services.AddSingleton(kernel);
